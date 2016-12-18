@@ -2,8 +2,10 @@
 <html lang="en">
   <head>
     <title>Guessing Game</title>
+    <link rel="icon" href="img/fire-small.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
 
@@ -12,31 +14,61 @@
         <div id='headers' class='text-center'>
           <!-- Title and subtitles! -->
           <h1>Guessing Game</h1>
-          <h2>Guess a Number Between 1 and 100<h2>
+          <h2 id='title'>Guess a Number Between 1 and 100<h2>
         </div>
 
         <div id='main' class='text-center'>
           <div id='input-parent' class='form-inline'>
             <!-- Player's guess input, and submit button -->
-            <input id='player-input' class='text-center' type="number" name="" min=1 max=100 step=1 placeholder=" #" focus=true />
+            <input id='player-input' class='text-center' maxlength=3 placeholder=" #" autofocus='autofocus' />
             <button id='submit' class='btn btn-success harshred'>Go!</button>
           </div>
 
           <div id='guesses'>
             <!-- unordered list of guesses -->
             <ul>
-              <li class='guess'>-</li>
-              <li class='guess'>-</li>
-              <li class='guess'>-</li>
-              <li class='guess'>-</li>
-              <li class='guess'>-</li>
+              <li class='guess-parent'>
+                <span class='guess'>-</span>
+                <br/>
+                <span>
+                  <img class='status' src='img/question.png' />
+                </span>
+              </li>
+              <li class='guess-parent'>
+                <span class='guess'>-</span>
+                <br/>
+                <span>
+                  <img class='status' src='img/question.png' />
+                </span>
+              </li>
+              <li class='guess-parent'>
+                <span class='guess'>-</span>
+                <br/>
+                <span>
+                  <img class='status' src='img/question.png' />
+                </span>
+              </li>
+              <li class='guess-parent'>
+                <span class='guess'>-</span>
+                <br/>
+                <span>
+                  <img class='status' src='img/question.png' />
+                </span>
+              </li>
+              <li class='guess-parent'>
+                <span class='guess'>-</span>
+                <br/>
+                <span>
+                  <img class='status' src='img/question.png' />
+                </span>
+              </li>
             </ul> 
           </div>
 
           <div id="menu-btns">
             <!-- reset and hint buttons -->
-            <button class='btn btn-danger btn-lg'>Reset</button>
-            <button class='btn btn-info btn-lg'>Hint</button>
+            <button class='btn btn-danger btn-lg' id='reset'>Reset</button>
+            <button class='btn btn-info btn-lg' id='hint'>Hint</button>
           </div>
         </div>
       </div>
@@ -46,7 +78,9 @@
     <div id='footer'>
         <div class='row text-center'>
           <div class='col-xs-4'>
-            <img src='fa-logo@2x.png'></img>
+            <a href="http://www.fullstackacademy.com" target="_blank">
+              <img src='img/fa-logo@2x.png'></img>
+            </a>
           </div>
 
           <div class='col-xs-4'>
@@ -54,12 +88,15 @@
           </div>
 
           <div class='col-xs-4'>
-            <img src='grace_hopper_academy.png'></img>
+            <a href="https://www.gracehopper.com/" target="_blank">
+              <img src='img/grace_hopper_academy.png'></img>
+            </a>
           </div>
 
 
         </div>
     </div>
-
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script src="js/GuessingGame.js"></script>
   </body>
 </html>

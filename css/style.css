@@ -1,5 +1,5 @@
 body {
-  background-image: url('jigsaw.jpg');
+  background-image: url('../img/jigsaw.jpg');
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -17,13 +17,18 @@ ul {
   background-color:#800000;
   border: 2px solid #4d0000;
 }
-.guess {
+.guess-parent {
   border:3px solid #800000;
   border-radius: 20%;
   background-color:gray;
   padding:0.1em 0.75em;
   font-size:40px; 
   display: inline-block;
+}
+.guess-parent span img {
+  width: 100px;
+  height: 100px;
+  margin: auto;
 }
 img {
     display: inline;
